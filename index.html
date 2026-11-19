@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta Charset="UTF-8">
+    <meta name="viewport" content="Width=device-width, initial-scale=1.0">
+    <title>Holiday and Long-Weekend Planner</title>
+    <link rel="stylesheet" href="style.css">
+
+ </head>   
+ <body>
+    <header>
+        <h1>📅 Holiday and Long-Weekend Planner</h1>
+        <p>Find public holidays and see which ones give you a long break.</p>
+
+    </header>
+
+    <main>
+        <section id="picker">
+            <label>Country
+                <select id="country-select">
+                    <option value="">Loading countries...</option>
+                    </select>
+            </label>
+            <label>Year
+                <select id="year-select"></select>
+
+         </label>
+        </section>
+
+        <section id="controls" class="hidden">
+            <label>Sort by
+             
+                <select id="sort-select">
+                    <option value="date">Date</option>
+                    <option value="break">Longest break first</option>
+                    <option value="name">Name (A-Z)</option>
+                </select>
+                </label>
+
+                <label>Show
+                    <select id="highlight-filter">
+                        <option value="all">All holidays</option>
+                        <option value="long">Long weekends only</option>
+                        <option value="bridge">Bridge-day tips only</option>
+                        </select>
+
+                </label>
+            <label>Month
+                <select id="month-filter">
+                    <option value="all">All months</option>
+                </select>
+
+            </label>
+            <label>Type
+                <select id="type-filter">
+                    <option value="all">All types</option>
+                    <option value="Public">Public</option>
+                    <option value="Bank">Bank</option>
+                    <option value="School">School</option>
+                    <option value="Authorities">Authorities</option>
+                    <option value="Optional">Optional</option>
+                    <option value="Observance">Observance</option>
+                </select>
+            </label>
+
+            <label>Search
+               <input type="text" id="search-input" placeholder="e.g. christmas">
+            </label>
+
+        </section>
+
+        <p id="status" role="status"></p>
+        <p id="summary"></p>
+        <section id="results"></section>
+    </main>
+
+    <footer>
+        <P>Holiday data from <a href="https://date.nager.at" target="_black" rel="noopener">Nager.Date</a>. It may differ from official government announcements.</p>
+        <p>Weekends are assumed to be saturday and sunday.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    </body>
+    </html>
